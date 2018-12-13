@@ -1,0 +1,16 @@
+<h1 class="about"> Selection of Cakes</h1>
+
+
+<div class="card-group">
+  
+  <% for items in @@cakes do %>
+    <div class="card">
+    <img class="card-img-top img_size" src="<%=items.img%>" alt="Card image cap">
+      <h5 class="card-title"> <%=items.name%> </h5>
+      <p class="card-text">Price: <%=items.price%> </p> 
+      <p><%=items.description%></p>
+    </div>
+    <%end%>
+
+
+</div>

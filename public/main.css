@@ -1,11 +1,3 @@
-header{
-
-    background-color: aqua;
-    
-
-
-}
-
     ul {
         list-style-type: none;
         margin: 0;
@@ -29,3 +21,71 @@ header{
       li a:hover {
         background-color: #111;
       }
+
+      .column {
+      
+        display: inline-block;
+        
+      }
+      
+      /* Clearfix (clear floats) */
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+    .about{
+      padding-top: 40px;
+      margin-bottom: 0;
+      text-align: center;
+      background-color: palevioletred;
+      
+    }
+  
+.img_size{
+  width: 353.33px;
+  height: 302.48px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+
+}
+
+.slide_Img{
+  width: 100%;
+  height: 600px;
+  position: relative;
+
+}
+.container{
+  padding: 0px;
+  margin: 0px;
+}
+
+footer{
+  background-color: #333;
+  text-align: center;
+}
+
+p{
+  margin-bottom: 0;
+}
+
+h2{
+  color: white;
+  margin-bottom: 0;
+}
+
+.uddin{
+  
+  padding-top:20px;
+  text-align: center;
+  background-color: palevioletred;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+h1{
+  margin-bottom:0;
+  font-size: 50px;
+  color: white;
+
+}
