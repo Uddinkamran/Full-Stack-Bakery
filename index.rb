@@ -3,6 +3,7 @@ require 'sinatra/reloader'
 require './cake'
 require './muffin'
 require './cookie'
+require 'csv'
 
 
 
@@ -46,3 +47,20 @@ get '/muffins' do
     erb :muffins, :layout => :home
 end 
 
+get '/csv' do 
+    content_type 'application/csv'
+    attachment "bakery.csv"
+    csv_string = CSV.generate do |csv|
+        csv << ["Name", "Price", "Image", "Description"]
+      @@cookies.each do |item| 
+        csv << [item.name, item.price, item.img, item.description]
+      end
+      @@muffins.each do |thing|
+        csv << [thing.name, thing.price, thing.img, thing.description]
+      end
+      @@cakes.each do |one|
+        csv << [one.name, one.price, one.img, one.description]
+      end
+
+    end    
+end
